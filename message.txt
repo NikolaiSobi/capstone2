@@ -1,0 +1,131 @@
+CREATE SCHEMA IF NOT EXISTS FleshAndBlood;
+
+CREATE TABLE FleshAndBlood."Card" (
+    id character varying NOT NULL
+);
+
+
+CREATE TABLE FleshAndBlood."Deck" (
+    "DeckID" bigint NOT NULL,
+    "Name" character varying NOT NULL,
+    "Player" bigint NOT NULL,
+    "Card" character varying NOT NULL,
+    "TopCard" boolean DEFAULT false,
+    "Img" character varying
+);
+
+ALTER TABLE FleshAndBlood."Deck" ALTER COLUMN "DeckID" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME FleshAndBlood."Deck_DeckID_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+CREATE TABLE FleshAndBlood."Friends" (
+    "FriendOne" bigint NOT NULL,
+    "FriendTwo" bigint NOT NULL
+);
+
+
+CREATE TABLE FleshAndBlood."Player" (
+    "userName" character varying NOT NULL,
+    password character varying NOT NULL,
+    "Id" bigint NOT NULL
+);
+
+ALTER TABLE FleshAndBlood."Player" ALTER COLUMN "Id" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME FleshAndBlood."Player_Id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+ALTER TABLE ONLY FleshAndBlood."Card"
+    ADD CONSTRAINT "Card_pkey" PRIMARY KEY (id);
+
+
+ALTER TABLE ONLY FleshAndBlood."Deck"
+    ADD CONSTRAINT "Deck_pkey" PRIMARY KEY ("DeckID");
+
+ALTER TABLE ONLY FleshAndBlood."Player"
+    ADD CONSTRAINT "Player_pkey" PRIMARY KEY ("Id");
+
+ALTER TABLE ONLY FleshAndBlood."Friends"
+    ADD CONSTRAINT "FriendOne" FOREIGN KEY ("FriendOne") REFERENCES 
+CREATE TABLE FleshAndBlood."Card" (
+    id character varying NOT NULL
+);
+
+
+CREATE TABLE FleshAndBlood."Deck" (
+    "DeckID" bigint NOT NULL,
+    "Name" character varying NOT NULL,
+    "Player" bigint NOT NULL,
+    "Card" character varying NOT NULL,
+    "TopCard" boolean DEFAULT false,
+    "Img" character varying
+);
+
+ALTER TABLE FleshAndBlood."Deck" ALTER COLUMN "DeckID" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME FleshAndBlood."Deck_DeckID_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+CREATE TABLE FleshAndBlood."Friends" (
+    "FriendOne" bigint NOT NULL,
+    "FriendTwo" bigint NOT NULL
+);
+
+
+CREATE TABLE FleshAndBlood."Player" (
+    "userName" character varying NOT NULL,
+    password character varying NOT NULL,
+    "Id" bigint NOT NULL
+);
+
+ALTER TABLE FleshAndBlood."Player" ALTER COLUMN "Id" ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME FleshAndBlood."Player_Id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+ALTER TABLE ONLY FleshAndBlood."Card"
+    ADD CONSTRAINT "Card_pkey" PRIMARY KEY (id);
+
+
+ALTER TABLE ONLY FleshAndBlood."Deck"
+    ADD CONSTRAINT "Deck_pkey" PRIMARY KEY ("DeckID");
+
+ALTER TABLE ONLY FleshAndBlood."Player"
+    ADD CONSTRAINT "Player_pkey" PRIMARY KEY ("Id");
+
+ALTER TABLE ONLY FleshAndBlood."Friends"
+    ADD CONSTRAINT "FriendOne" FOREIGN KEY ("FriendOne") REFERENCES FleshAndBlood."Player"("Id") ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE ONLY FleshAndBlood."Friends"
+    ADD CONSTRAINT "FriendTwo" FOREIGN KEY ("FriendTwo") REFERENCES FleshAndBlood."Player"("Id") ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+ALTER TABLE ONLY FleshAndBlood."Deck"
+    ADD CONSTRAINT "Player" FOREIGN KEY ("Player") REFERENCES FleshAndBlood."Player"("Id") ON UPDATE CASCADE ON DELETE CASCADE NOT VALID;
+
+
+ALTER TABLE ONLY FleshAndBlood."Friends"
+    ADD CONSTRAINT "FriendTwo" FOREIGN KEY ("FriendTwo") REFERENCES FleshAndBlood."Player"("Id") ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+ALTER TABLE ONLY FleshAndBlood."Deck"
+    ADD CONSTRAINT "Player" FOREIGN KEY ("Player") REFERENCES FleshAndBlood."Player"("Id") ON UPDATE CASCADE ON DELETE CASCADE NOT VALID;
