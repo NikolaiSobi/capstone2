@@ -1,0 +1,43 @@
+:root {
+    --lineColor: rgba(64, 85, 45, 0.322);
+}
+
+.App {
+    position: relative;
+    background-image: url('./pictures/04\ -\ Bruce\ Antique\ Old\ Paper\ Background\ by\ SlidesCorner.jpg');
+    background-repeat: repeat-y;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.lines-left {
+    background-color: var(--lineColor);
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    margin-left: 60px;
+}
+
+.lines-left2 {
+    background-color: var(--lineColor);
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.lines-right {
+    background-color: var(--lineColor);
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    right: 80px;
+}
+
+.lines-right2 {
+    background-color: var(--lineColor);
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    right: -10px;
+}

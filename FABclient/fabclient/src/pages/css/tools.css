@@ -1,0 +1,28 @@
+.test {
+    border: 1px solid black;
+}
+
+.grabbable {
+    cursor: grab;
+    caret-color: transparent;
+}
+
+.touch {
+    cursor: pointer;
+}
+
+.hide {
+    display: none
+}
+
+.flexbox {
+    display:flex
+}
+
+.centerContent {
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}

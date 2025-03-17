@@ -1,0 +1,10 @@
+.set {
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.set:hover {
+    background-color: rgb(219, 219, 219);
+}

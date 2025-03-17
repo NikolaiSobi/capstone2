@@ -1,0 +1,7 @@
+.gameboard {
+    position: relative;
+    background-color: rgb(19, 110, 68);
+    height: 100vh;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}

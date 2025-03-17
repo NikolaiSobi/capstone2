@@ -1,0 +1,43 @@
+.card-grid {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 20px;
+    column-gap: -50px;
+}
+
+.set-grid {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    row-gap: 20px;
+    column-gap: -50px;
+}
+
+.card-panel {
+    background-color: black;
+    width: 33vw;
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    color: white;
+}
+
+.back-button {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+    position:sticky;
+}
+
+.page {
+    position: relative;
+}
+
+.deck-format {
+    text-align: center;
+}

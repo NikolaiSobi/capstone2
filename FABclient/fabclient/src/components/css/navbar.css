@@ -1,0 +1,53 @@
+.navbar {
+     display: flex;
+     justify-content: center;
+     column-gap: 50px;
+     background-color: rgb(10, 10, 10);
+     padding: 20px;
+     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.61);
+}
+
+.logo {
+    background-image: url('./logo_fab_stroke_black_750.height-350.original.png');
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 27%;
+    top:5px;
+}
+
+.line {
+    width: 100vw;
+    background-color: rgb(207, 178, 13);
+    border-top: solid 1px gold;
+    height: 5px;
+
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(214, 17, 17);
+    align-self: center;
+}
+
+.link:hover{
+    transition: .3s;
+    color: rgb(238, 82, 82)
+}
+
+.login {
+    color: rgb(214, 17, 17);
+    border: solid 2px rgb(238, 82, 82);
+    border-radius: 5px;
+    padding: 3px 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.login:hover {
+    transition: .5s;
+    color: rgb(0, 0, 0);
+    background-color:  rgb(238, 82, 82);
+}

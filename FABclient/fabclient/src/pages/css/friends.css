@@ -1,0 +1,56 @@
+.search-page {
+
+    height:93vh;
+
+
+}
+
+.search-box {
+    background-color: transparent;
+    top: 20vh;
+    position: absolute;
+}
+
+.players-table {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 70px;
+    width: 50vw;
+}
+
+.boarderless {
+    border: none;
+}
+
+.bar {
+    justify-self: center;
+}
+
+.name {
+    width: 80%;
+    text-align: left;
+    padding-left: 40px;   
+}
+
+.title {
+    width: 80%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.number {
+    width: 20%;
+    cursor: pointer;
+    background: rgb(198,181,44);
+    background: linear-gradient(180deg, rgba(198,181,44,1) 0%, rgba(247,221,12,1) 30%, rgba(247,221,12,1) 51%, rgba(247,221,12,1) 74%, rgba(198,181,44,1) 100%);
+}
+
+.decks {
+    min-width: 60%;
+    display: block;
+    overflow: auto;
+}
+
+.expand {
+
+}
